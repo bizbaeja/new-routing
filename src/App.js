@@ -1,18 +1,14 @@
 import logo from "./assets/images/logo.svg";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import routes from "./routes";
+import Routes2 from "./Routes2";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        {routes.map((route, index) => (
-          <Route
-            key={index}
-            path={route.path}
-            render={(props) => <route.element {...props} />}
-          ></Route>
+        {Routes2.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element}></Route>
         ))}
       </Routes>
     </div>
